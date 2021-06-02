@@ -1,0 +1,5 @@
+export { default as IntentsTable } from './intents-table'
+export { default as Hero } from './hero'
+export { default as IntentInfo } from './indent-info'
+export { default as ProcessInfo } from './process-info'
+export { default as BotWizard } from './bot-wizard'

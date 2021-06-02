@@ -1,0 +1,79 @@
+@gray-dark: #172d3d;
+@gray-light: #fafafa;
+
+@block-padding-vertical: 100px;
+
+// Layout
+.container {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.make-container(@minWidth, @breakpoint) {
+  @media (min-width: @minWidth) {
+    .container {
+      max-width: @breakpoint;
+    }
+  }
+}
+
+.make-container(@screen-xs-min, @screen-xs);
+.make-container(@screen-sm-min, @screen-sm);
+.make-container(@screen-md-min, @screen-md);
+.make-container(@screen-lg-min, @screen-lg);
+.make-container(@screen-xl-min, @screen-xl);
+
+.section-title {
+  margin-top: 0;
+  padding-bottom: @margin-lg;
+}
+
+// Hero block
+.hero {
+  background-color: @gray-dark;
+  padding-top: 100px;
+
+  &__paper {
+    width: 100%;
+    border-top-left-radius: @border-radius-base;
+    border-top-right-radius: @border-radius-base;
+    background-color: @white;
+    padding: @padding-lg;
+  }
+}
+
+// Intent info
+.intent-info {
+  background-color: @gray-light;
+  padding: @block-padding-vertical 0;
+
+  &__paper {
+    background-color: @white;
+    border-radius: @border-radius-base;
+    padding: @padding-lg;
+  }
+}
+
+// Example intent
+.example-intent {
+  max-width: 450px;
+}
+
+// Process info
+.process-info {
+  padding: @block-padding-vertical 0;
+}
+
+// Bot wizard
+.bot-wizard {
+  background-color: @gray-dark;
+  padding: @block-padding-vertical 0;
+  color: @gray-light;
+
+  .section-title {
+    color: @gray-light;
+  }
+
+
+}
